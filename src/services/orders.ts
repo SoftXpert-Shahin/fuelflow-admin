@@ -1,7 +1,7 @@
 import { supabase } from "./supabase";
 
  
-export async function getOrders(search = "", status = "all") {
+export async function getOrders(status = "all") {
   let query = supabase
     .from("orders")
     .select(`

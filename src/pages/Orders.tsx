@@ -20,7 +20,7 @@ export default function Orders() {
     async function loadOrders() {
         setLoading(true);
         try {
-            const data = await getOrders(search, status);
+            const data = await getOrders( status);
             setOrders(data);
         } finally {
             setLoading(false);
