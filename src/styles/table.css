@@ -1,0 +1,25 @@
+.table{
+    width:100%;
+    border-collapse:collapse;
+    background:#0F172A;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.table th{
+    background:#111827;
+    color:white;
+    text-align:left;
+    padding:16px;
+    font-size:14px;
+}
+
+.table td{
+    padding:16px;
+    color:#CBD5E1;
+    border-top:1px solid #1E293B;
+}
+
+.table tr:hover{
+    background:#172033;
+}
