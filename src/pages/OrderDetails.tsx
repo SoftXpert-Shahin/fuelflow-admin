@@ -168,7 +168,7 @@ export default function OrderDetails() {
         );
     }
 
-    const currentStatus = order.status?.toLowerCase();
+    // const currentStatus = order.status?.toLowerCase();
 
     return (
         <div style={styles.container}>

@@ -3,8 +3,7 @@ import type { ReactNode } from "react";
 import { 
     MdBusiness, 
     MdLocalShipping, 
-    MdMap, 
-    MdDns, 
+    MdMap,  
     MdDescription, 
     MdSave, 
 } from "react-icons/md";

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { MdSearch, MdFilterList, MdArrowForward, MdLocalShipping, MdReceipt } from "react-icons/md";
+import { MdSearch, MdFilterList, MdArrowForward, MdReceipt } from "react-icons/md";
 import { getOrders, subscribeOrders } from "../services/orders";
 
 export default function Orders() {
