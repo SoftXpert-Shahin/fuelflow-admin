@@ -26,16 +26,18 @@ const orderTimeline = [
         title: "Driver Accepted",
         field: "accepted_at",
     },
-    {
-        key: "arrived",
-        title: "Driver Arrived",
-        field: "arrived_at",
-    },
+
     {
         key: "delivering",
         title: "Delivery Started",
         field: "delivery_started_at",
     },
+    {
+        key: "arrived",
+        title: "Driver Arrived",
+        field: "arrived_at",
+    },
+    
     {
         key: "waiting_confirmation",
         title: "Waiting Customer Confirmation",
@@ -314,31 +316,26 @@ export default function OrderDetails() {
 
                     )}
 
-                    {order.status === "accepted" && (
 
-                        <ActionButton
-                            title="Driver Arrived"
-                            color="#8B5CF6"
-                            onClick={() =>
-                                changeStatus("arrived")
-                            }
-                            loading={actionLoading === "arrived"}
-                        />
+{order.status === "arrived" && (
 
-                    )}
+<ActionButton
+    title="Start Delivery"
+    color="#06B6D4"
+    onClick={() =>
+        changeStatus("delivering")
+    }
+    loading={actionLoading === "delivering"}
+/>
 
-                    {order.status === "arrived" && (
+)}
 
-                        <ActionButton
-                            title="Start Delivery"
-                            color="#06B6D4"
-                            onClick={() =>
-                                changeStatus("delivering")
-                            }
-                            loading={actionLoading === "delivering"}
-                        />
 
-                    )}
+
+
+
+            
+                  
 
                     {order.status === "delivering" && (
 
@@ -354,6 +351,21 @@ export default function OrderDetails() {
                         />
 
                     )}
+
+
+
+{order.status === "accepted" && (
+
+<ActionButton
+    title="Driver Arrived"
+    color="#8B5CF6"
+    onClick={() =>
+        changeStatus("arrived")
+    }
+    loading={actionLoading === "arrived"}
+/>
+
+)}
 
                     {order.status ===
                         "waiting_confirmation" && (
